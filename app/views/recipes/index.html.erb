@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Recipes</h1>
+<h1>My Recipes</h1>
+
+<br>
 
 <table>
   <thead>
@@ -10,6 +12,7 @@
       <th>Time (in minutes)</th>
       <th colspan="3"></th>
     </tr>
+    
   </thead>
 
   <tbody>
@@ -18,14 +21,58 @@
         <td><%= recipe.name %></td>
         <td><%= recipe.description %></td>
         <td><%= recipe.time %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show Details', recipe %></td>
+        <td><%= link_to 'Edit Recipe', edit_recipe_path(recipe) %></td>
+        <td><%= link_to 'Destroy Recipe', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    
   </tbody>
+  
+  
 </table>
 
 <br>
 
 <%= link_to 'New Recipe', new_recipe_path %>
+
+<br>
+
+<%
+=begin%>
+ <div class="col-lg-12 mt-5">
+  <% if flash[:alert] %>
+    <div class="alert alert-warning"><%= flash[:alert] %></div>
+  <% end %>
+  <div class="mx-auto mt-5" style="width: 400px">
+      <%= form_with(url: search_path, method: 'get', local: true) do %>
+         <div class="form-group">
+            <%= label_tag :recipe, 'Search for a recipe '%>
+            <%= text_field_tag :recipe, nil, placeholder: 'Eg. chocolate', class: 'form-control' %>
+         </div>
+      <%= button_tag 'Search', class: 'btn btn-success btn-block' %>
+      <% end %>
+  </div>
+</div> 
+<%
+=end%>
+
+</br>
+</br>
+
+<h1>When to Eat</h1>
+
+<br>
+<%= week_calendar events: @recipes, number_of_weeks: 2 do |date, recipes| %>
+  <%= date %>
+
+  <% @recipes.each do |recipe| %>
+    <div>
+      <% if recipe.time_eaten == date %>
+        <%= link_to recipe.name, recipe %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
+
+
