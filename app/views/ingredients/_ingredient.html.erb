@@ -1,0 +1,4 @@
+<p><%= "#{ingredient.name} #{ingredient.qty} #{ingredient.unit}" %>
+<%= link_to "Delete", recipe_ingredient_path(@recipe, ingredient.id), method: :delete, data: { confirm: "Are you sure?" } %></p>
+
+
