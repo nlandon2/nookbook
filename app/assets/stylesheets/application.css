@@ -28,3 +28,8 @@ th {
 th {
   border-bottom: 1px solid #ddd;
 }
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
