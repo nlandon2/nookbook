@@ -1,6 +1,7 @@
+<p><strong>Your recipe:</strong></p>
 
-<%= link_to 'Home', recipes_path %>
 <p>
+  
   <strong>Name:</strong>
   <%= @recipe.name %>
 </p>
@@ -15,6 +16,16 @@
   <%= "#{@recipe.time} minutes "%>
 </p>
 
+<p>
+  <strong>Date:</strong>
+  <%= "#{@recipe.time_eaten}"%>
+</p>
+
+
+<%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %> 
+<br>
+<br>
+
 <div id="ingredients_wrapper">
  <strong>Ingredients:</strong>
  <%= render @recipe.ingredients %>
@@ -23,5 +34,4 @@
  </div>
 </div>
 
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 

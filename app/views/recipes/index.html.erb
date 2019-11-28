@@ -10,6 +10,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Time (in minutes)</th>
+      <th>Date</th>
       <th colspan="3"></th>
     </tr>
     
@@ -21,6 +22,7 @@
         <td><%= recipe.name %></td>
         <td><%= recipe.description %></td>
         <td><%= recipe.time %></td>
+        <td><%= recipe.time_eaten %></td>
         <td><%= link_to 'Show Details', recipe %></td>
         <td><%= link_to 'Edit Recipe', edit_recipe_path(recipe) %></td>
         <td><%= link_to 'Destroy Recipe', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>

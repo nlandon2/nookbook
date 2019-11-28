@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_11_28_080502) do
 
   create_table "recipes", force: :cascade do |t|
     t.integer "user_id"
-    t.string "name"
+    t.string "name", null: false
     t.string "description"
     t.integer "time"
     t.datetime "created_at", precision: 6, null: false

@@ -4,4 +4,7 @@ class Recipe < ApplicationRecord
     def start_time 
         self.time_eaten
     end
+
+    validates :name, presence: true, uniqueness: true
+    validates :time, numericality: { only_integer: true }
 end
