@@ -65,7 +65,7 @@
 <h1>When to Eat</h1>
 
 <br>
-<%= week_calendar events: @recipes, number_of_weeks: 2 do |date, recipes| %>
+<%= week_calendar events: @recipes do |date, recipes| %>
   <%= date %>
 
   <% @recipes.each do |recipe| %>
@@ -76,5 +76,20 @@
     </div>
   <% end %>
 <% end %>
+
+</br>
+
+<h1>Shopping List</h1>
+<% @recipes.each do |recipe| %>
+  <% recipe.ingredients.each do |ingredient| %>
+    <div>
+        <% if ingredient.shopping == true %>
+          <%="#{ingredient.qty} #{ingredient.unit} #{ingredient.name}" %>
+        <% end %>
+    </div>
+  <% end %>
+  <% end %>
+<br>
+
 
 

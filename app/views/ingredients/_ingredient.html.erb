@@ -1,4 +1,12 @@
 <p><%= "#{ingredient.name} #{ingredient.qty} #{ingredient.unit}" %>
-<%= link_to "Delete", recipe_ingredient_path(@recipe, ingredient.id), method: :delete, data: { confirm: "Are you sure?" } %></p>
+<%= link_to "Delete", recipe_ingredient_path(@recipe, ingredient.id), method: :delete, data: { confirm: "Are you sure?" } %>
+<% if ingredient.shopping == false%>
+    <%= link_to "Add to Shopping List", shopping_toggle_recipe_ingredient_path(@recipe, ingredient.id),method: :patch %>
+<% else %>
+    <%= link_to "Remove from Shopping List", shopping_toggle_recipe_ingredient_path(@recipe, ingredient.id),method: :patch %>
+<%end%>    
+</p>
+
+
 
 
