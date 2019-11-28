@@ -66,7 +66,7 @@ class RecipesController < ApplicationController
     end
 
     def recipe_params
-      params.require(:recipe).permit(:name, :description, :time)
+      params.require(:recipe).permit(:name, :description, :time, :time_eaten)
     end
 
     # def request_api(url)
