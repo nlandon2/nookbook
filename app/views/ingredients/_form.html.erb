@@ -1,4 +1,4 @@
-<%= form_for([@recipe, @recipe.ingredients.build]) do |f| %>
+<%= bootstrap_form_for([@recipe, @recipe.ingredients.build]) do |f| %>
  <%= f.label "Add ingredients:" %>
  <%= f.text_field :name, placeholder: "New Ingredient" %>
  <%= f.text_field :qty, placeholder: "Quantity" %>

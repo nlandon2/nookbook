@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2019_11_28_153057) do
     t.integer "time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.date "time_eaten"
+    t.date "when"
     t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 

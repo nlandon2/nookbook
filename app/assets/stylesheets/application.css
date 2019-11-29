@@ -12,11 +12,13 @@
 
 
 /*
-
+ *= require rails_bootstrap_forms
  *= require_tree .
  *= require_self
  *= require simple_calendar 
+
  */
+
 footer {
   margin-top: 100px;
 }
@@ -31,8 +33,9 @@ th {
 }
 html,
 body {
-  margin: 0px;
-  padding: 0px;
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  background: #b2fefa;
+  background: -webkit-linear-gradient(to right, #0ed2f7, #b2fefa);
+  background: linear-gradient(to right, #0ed2f7, #b2fefa);
+
   font-family: roboto;
 }

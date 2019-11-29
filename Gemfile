@@ -26,6 +26,8 @@ gem 'httparty'
 gem 'excon'
 gem 'dotenv-rails', groups:[:development, :test]
 gem "simple_calendar", "~> 2.0"
+gem "bootstrap_form", "~> 4.0"
+
 
 
 # Use Active Storage variant

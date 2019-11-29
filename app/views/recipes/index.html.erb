@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>My Recipes</h1>
 
@@ -22,7 +22,7 @@
         <td><%= recipe.name %></td>
         <td><%= recipe.description %></td>
         <td><%= recipe.time %></td>
-        <td><%= recipe.time_eaten %></td>
+        <td><%= recipe.when %></td>
         <td><%= link_to 'Show Details', recipe, :class => "btn btn-outline-success" %></td>
         <td><%= link_to 'Edit Recipe', edit_recipe_path(recipe), :class => "btn btn-outline-success" %></td>
         <td><%= link_to 'Destroy Recipe', recipe, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-success" %></td>
@@ -72,7 +72,7 @@
 
   <% @recipes.each do |recipe| %>
     <div>
-      <% if recipe.time_eaten == date %>
+      <% if recipe.when == date %>
         <%= link_to recipe.name, recipe %>
       <% end %>
     </div>

@@ -1,4 +1,4 @@
-<%= form_with(model: recipe, local: true) do |form| %>
+<%= bootstrap_form_with(model: recipe, local: true) do |form| %>
   <% if recipe.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
@@ -12,23 +12,19 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
   <div class="form-group">
-    <%= form.label :description %>
     <%= form.text_field :description %>
   </div>
 
   <div class="form-group">
-    <%= form.label "#{:time} in minutes" %>
     <%= form.number_field :time %>
   </div>
 
   <div class="form-group">
-    <%= form.label "date" %>
-    <%= form.date_field :time_eaten %>
+    <%= form.date_field :when %>
   </div>
 
   <div class="actions">
