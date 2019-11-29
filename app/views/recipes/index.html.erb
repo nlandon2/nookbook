@@ -4,7 +4,7 @@
 
 <br>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -23,9 +23,9 @@
         <td><%= recipe.description %></td>
         <td><%= recipe.time %></td>
         <td><%= recipe.time_eaten %></td>
-        <td><%= link_to 'Show Details', recipe %></td>
-        <td><%= link_to 'Edit Recipe', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy Recipe', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show Details', recipe, :class => "btn btn-outline-success" %></td>
+        <td><%= link_to 'Edit Recipe', edit_recipe_path(recipe), :class => "btn btn-outline-success" %></td>
+        <td><%= link_to 'Destroy Recipe', recipe, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-success" %></td>
       </tr>
     <% end %>
     
@@ -36,7 +36,9 @@
 
 <br>
 
-<%= link_to 'New Recipe', new_recipe_path %>
+<div>
+<%= link_to 'New Recipe', new_recipe_path, :class => "btn btn-outline-success" %>
+</div>
 
 <br>
 

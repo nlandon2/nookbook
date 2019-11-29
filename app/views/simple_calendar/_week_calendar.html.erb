@@ -1,13 +1,15 @@
 <div class="simple-calendar">
   <div class="calendar-heading">
-    <%= link_to t('simple_calendar.previous', default: 'Previous'), calendar.url_for_previous_view %>
+    <%= link_to t('simple_calendar.previous', default: 'Previous'), calendar.url_for_previous_view, :class => "btn btn-outline-success" %>
     <% if calendar.number_of_weeks == 1 %>
       <span class="calendar-title">Week <%= calendar.week_number %></span>
     <%else%>
         <span class="calendar-title">Week <%= calendar.week_number %> - <%= calendar.end_week %></span>
     <%end%>
-        <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view %>
+        <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view,:class => "btn btn-outline-success" %>
   </div>
+
+  <br>
 
   <table class="table table-striped">
     <thead>
