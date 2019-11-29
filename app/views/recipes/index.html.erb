@@ -84,11 +84,13 @@
 <h1>Shopping List</h1>
 <% @recipes.each do |recipe| %>
   <% recipe.ingredients.each do |ingredient| %>
-    <div>
+    <ul class="list-group">
+       <li class="list-group-item">
         <% if ingredient.shopping == true %>
           <%="#{ingredient.qty} #{ingredient.unit} #{ingredient.name}" %>
         <% end %>
-    </div>
+       </li>
+    </ul>
   <% end %>
   <% end %>
 <br>

@@ -25,20 +25,9 @@
     <nav class="navbar fixed-top navbar-dark bg-dark">
       <div class="navbar-inner">
       <a class="navbar-brand" href="/">Nookbook</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse w-100 order-1 order-md-0 dual-collapse2" id="navbarSupportedContent" >
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <p class="navbar-text float-left">
-              <% if user_signed_in? %> 
-                <%= link_to 'Home', recipes_path %> 
-              <%end%>
-            </p>
-          </li>
-        </ul>   
-      </div>
       <div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent" >
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
