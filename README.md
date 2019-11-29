@@ -42,7 +42,7 @@ rails db:create db:migrate db:seed
 rails server
 ```
 
-## Future features
+## Future Features
 
 Some of the futures I want to add include adding a search feature for recipes using the Edamam API for inspiration of what recipes to make. If I do that, it would be easy to set it to a certain date. I also want to have the app deployed to Heroku soon.
 
